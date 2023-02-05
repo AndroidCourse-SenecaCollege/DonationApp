@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="Donation App"
+        android:textSize="40sp" />
+
+    <RadioGroup
+        android:id="@+id/paymethod_group"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        >
+        <RadioButton
+            android:id="@+id/credit_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Credit Card" />
+
+        <RadioButton
+            android:id="@+id/paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PayPal" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/sharing_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymethod_group"
+        android:layout_marginTop="50dp"
+        android:text="Would you like to share this on Social Media?" />
+
+    <EditText
+        android:id="@+id/donation_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sharing_checkbox"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="200dp"
+        android:inputType="numberDecimal"
+        android:hint="Enter Your Donation Amount"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/donate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/donation_amount"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:gravity="center"
+        android:text="Donate Now" />
+</RelativeLayout>
