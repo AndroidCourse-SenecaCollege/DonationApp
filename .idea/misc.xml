@@ -5,6 +5,9 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_report.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/donation_list_row.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/simple_list_row.xml" value="0.11388888888888889" />
+        <entry key="app/src/main/res/layout/spinner_row.xml" value="0.1" />
       </map>
     </option>
   </component>

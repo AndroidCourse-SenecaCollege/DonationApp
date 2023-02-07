@@ -42,11 +42,19 @@
 
     </RadioGroup>
 
+    <Spinner
+        android:id="@+id/paymentMethodSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymethod_group"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
     <CheckBox
         android:id="@+id/sharing_checkbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/paymethod_group"
+        android:layout_below="@id/paymentMethodSpinner"
         android:layout_marginTop="50dp"
         android:text="Would you like to share this on Social Media?" />
 
