@@ -10,30 +10,34 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class ReportActivity extends AppCompatActivity {
 
     TextView msgText;
     ListView simpleList;
     ListView donationList;
-
+    ArrayList<Donation> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
         String msg = getIntent().getExtras().getString("myMSG");
+        Donation t =  getIntent().getExtras().getParcelable("lastDonation");
+        if (getIntent().hasExtra("allDonation"))
+              list  = getIntent().getExtras().getParcelableArrayList("allDonation");
 
 
         msgText = findViewById(R.id.thankyou_msg);
         msgText.setText(msg);
 
         donationList = findViewById(R.id.donationList);
-         DonationsBaseAdapter baseAdapter = new DonationsBaseAdapter(MainActivity.allDonations,this);
+         DonationsBaseAdapter baseAdapter =
+                 new DonationsBaseAdapter(((MyApp)getApplication()).allDonations,this);
         donationList.setAdapter(baseAdapter);
 
         simpleList = findViewById(R.id.simple_list);
         String[] collegesArray = {"Seneca College", "Humber College", "Centennial College"};
-
-
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 R.layout.simple_list_row,

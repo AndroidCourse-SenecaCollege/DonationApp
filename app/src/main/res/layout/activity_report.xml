@@ -16,7 +16,6 @@
     android:layout_height="wrap_content"
     android:textSize="30sp"
     android:text="Thank You for your donation"
-
     />
 
     <ListView

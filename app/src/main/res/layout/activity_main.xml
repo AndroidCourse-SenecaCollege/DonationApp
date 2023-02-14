@@ -65,9 +65,8 @@
         android:layout_below="@id/sharing_checkbox"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="200dp"
-        android:inputType="numberDecimal"
         android:hint="Enter Your Donation Amount"
+        android:inputType="numberDecimal"
         android:minHeight="48dp" />
 
     <Button
@@ -76,8 +75,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/donation_amount"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
 
         android:gravity="center"
         android:text="Donate Now" />
+
+    <Button
+        android:text="Take A Photo"
+        android:id="@+id/tocommonIntent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_toRightOf="@id/donate_btn"
+        android:layout_below="@id/donation_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
